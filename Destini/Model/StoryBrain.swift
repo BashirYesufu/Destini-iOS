@@ -55,4 +55,16 @@ struct StoryBrain {
     func getChoice2() -> String {
         return stories[storyNumber].choice2
     }
+    
+    mutating func nextStory(userChoice: String) {
+        let currentStory = stories[storyNumber]
+        switch userChoice {
+        case currentStory.choice1:
+            storyNumber = currentStory.choice1Destination
+        case currentStory.choice2:
+            storyNumber = currentStory.choice2Destination
+        default:
+            storyNumber = 0
+        }
+    }
 }
