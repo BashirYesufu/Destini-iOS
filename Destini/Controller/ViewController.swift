@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         choice2Button.setTitle(choice2, for: .normal)
     }
 
-
+    @IBAction func choiceMade(_ sender: UIButton) {
+    }
+    
 }
 
