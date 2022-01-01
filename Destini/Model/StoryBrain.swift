@@ -10,6 +10,7 @@ import Foundation
 
 struct StoryBrain {
     
+    var storyNumber = 0
     let stories = [
         Story(
             title: "Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: 'Need a ride, boy?'.",
@@ -42,4 +43,16 @@ struct StoryBrain {
             choice2: "End", choice2Destination: 0
         )
     ]
+    
+    func getStoryTitle() -> String {
+        return stories[storyNumber].title
+    }
+    
+    func getChoice1() -> String {
+        return stories[storyNumber].choice1
+    }
+    
+    func getChoice2() -> String {
+        return stories[storyNumber].choice2
+    }
 }
